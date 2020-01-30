@@ -12,8 +12,8 @@ def nyc_pigeon_organizer(data)
           if reorganized_pigeon_data.has_key?(pigeon)
             pp "#{pigeon} => #{reorganized_pigeon_data[pigeon]}"
             if reorganized_pigeon_data[pigeon].has_key?(key)
-              pp "#{key} is in return array"
-#              reorganized_pigeon_data[pigeon] = {key => descriptor}
+              pp "Array ?= #{reorganized_pigeon_data[pigeon][key].class}"
+#              reorganized_pigeon_data[pigeon][key] = {key => descriptor}
             end
 #            reorganized_pigeon_data[pigeon][key] = descriptor
          else
