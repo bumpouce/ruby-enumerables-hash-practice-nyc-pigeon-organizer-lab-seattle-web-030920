@@ -8,8 +8,9 @@ def nyc_pigeon_organizer(data)
         descriptor = names.shift.to_s
         list_of_names = names.shift
         list_of_names.collect do |pigeon|
+
           if reorganized_pigeon_data.has_key?(pigeon)
-            pp "Record: #{reorganized_pigeon_data[pigeon]}"
+            pp "#{pigeon} => #{reorganized_pigeon_data[pigeon]}"
             if !reorganized_pigeon_data[pigeon].has_key?(key)
               pp "Key was not found"
               reorganized_pigeon_data[pigeon] = {key => descriptor}
@@ -19,6 +20,7 @@ def nyc_pigeon_organizer(data)
             reorganized_pigeon_data[pigeon] = {}
             reorganized_pigeon_data[pigeon][key] = [descriptor]
           end
+          
         end
       end
     end
