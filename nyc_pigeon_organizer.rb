@@ -24,7 +24,5 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-
-  reorganized_pigeon_data.collect {|individual| pp "#{individual}"}
   reorganized_pigeon_data
 end
