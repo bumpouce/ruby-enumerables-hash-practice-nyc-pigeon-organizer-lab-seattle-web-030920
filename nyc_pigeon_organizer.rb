@@ -15,7 +15,8 @@ def nyc_pigeon_organizer(data)
               pp "Array ?= #{reorganized_pigeon_data[pigeon][key].class}"
               reorganized_pigeon_data[pigeon][key] << descriptor
             else
-            reorganized_pigeon_data[pigeon] = {key => [descriptor]}
+            reorganized_pigeon_data[pigeon] = {key.to_sym => [descriptor]}
+            end
          else
             reorganized_pigeon_data[pigeon] = {}
             reorganized_pigeon_data[pigeon][key] = [descriptor]
