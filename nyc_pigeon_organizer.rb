@@ -10,7 +10,7 @@ def nyc_pigeon_organizer(data)
         list_of_names.collect do |pigeon|
           if reorganized_pigeon_data.has_key?(pigeon)
             pp "Record: #{reorganized_pigeon_data[pigeon]}"
-            if !reorganized_pigeon_data[pigeon][key]
+            if !reorganized_pigeon_data[pigeon].has_key?(key)
               pp "Key was not found"
               reorganized_pigeon_data[pigeon] = {key => descriptor}
             end
